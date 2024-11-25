@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:home_helper/core/router/app_router.dart';
+import 'package:home_helper/core/theme/app_theme.dart';
 
 /// The entry point of the Home Helper application.
 /// This is where we initialize essential app configurations
@@ -41,7 +43,7 @@ class HomeHelperApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       // App title shown in recent apps on Android
       title: 'Home Helper',
       
@@ -49,55 +51,10 @@ class HomeHelperApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       
       // Configure the global app theme
-      theme: ThemeData(
-        // Use Material 3 design system
-        useMaterial3: true,
-        
-        // Generate color scheme from a seed color
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF4CAF50), // Primary green color
-          brightness: Brightness.light,
-        ),
-        
-        // Use Poppins as our default font
-        fontFamily: 'Poppins',
-        
-        // Configure global text theme
-        textTheme: const TextTheme(
-          displayLarge: TextStyle(
-            fontSize: 32,
-            fontWeight: FontWeight.bold,
-            letterSpacing: -1.0,
-          ),
-          bodyLarge: TextStyle(
-            fontSize: 16,
-            letterSpacing: 0.5,
-          ),
-        ),
-        
-        // Configure global button theme
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            minimumSize: const Size(double.infinity, 48),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
-            ),
-          ),
-        ),
-      ),
+      theme: AppTheme.lightTheme,
       
-      // Temporary home widget - will be replaced with proper navigation
-      home: const Scaffold(
-        body: Center(
-          child: Text(
-            'Welcome to Home Helper',
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-      ),
+      // Configure the app router
+      routerConfig: AppRouter.router,
     );
   }
 }
