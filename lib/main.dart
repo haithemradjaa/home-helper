@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:home_helper/core/router/app_router.dart';
 import 'package:home_helper/core/theme/app_theme.dart';
+import 'package:home_helper/features/auth/data/repositories/auth_repository.dart';
+import 'package:home_helper/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:home_helper/features/auth/presentation/bloc/auth_event.dart';
 
 /// The entry point of the Home Helper application.
 /// This is where we initialize essential app configurations
@@ -43,18 +47,24 @@ class HomeHelperApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      // App title shown in recent apps on Android
-      title: 'Home Helper',
-      
-      // Remove the debug banner in development mode
-      debugShowCheckedModeBanner: false,
-      
-      // Configure the global app theme
-      theme: AppTheme.lightTheme,
-      
-      // Configure the app router
-      routerConfig: AppRouter.router,
+    return RepositoryProvider(
+      create: (context) => AuthRepositoryImpl(),
+      child: BlocProvider(
+        create: (context) => AuthBloc()..add(const CheckAuthStatus()),
+        child: MaterialApp.router(
+          // App title shown in recent apps on Android
+          title: 'Home Helper',
+          
+          // Remove the debug banner in development mode
+          debugShowCheckedModeBanner: false,
+          
+          // Configure the global app theme
+          theme: AppTheme.lightTheme,
+          
+          // Configure the app router
+          routerConfig: AppRouter.router,
+        ),
+      ),
     );
   }
 }
