@@ -1,3 +1,49 @@
+/// Home Helper Mobile Application - Entry Point
+///
+/// This is the main entry point for the Home Helper mobile application,
+/// responsible for initializing the app, setting up global configurations,
+/// and launching the root widget.
+///
+/// Key Responsibilities:
+/// - Initialize Flutter bindings
+/// - Configure system UI overlay styles
+/// - Set device orientation preferences
+/// - Create the root application widget
+///
+/// App Initialization Steps:
+/// 1. Ensure Flutter bindings are initialized
+/// 2. Lock device orientation to portrait mode
+/// 3. Configure system UI appearance
+/// 4. Create and run the root application widget
+///
+/// Design Principles:
+/// - Responsive UI configuration
+/// - Consistent system UI appearance
+/// - Performance optimization
+/// - Platform-specific customization
+///
+/// Global App Configuration:
+/// - Portrait-only orientation
+/// - Transparent status bar
+/// - Light system navigation bar
+///
+/// Typical Use Cases:
+/// - App startup
+/// - Initial configuration
+/// - Theme and routing setup
+///
+/// Example Configurations:
+/// ```dart
+/// SystemChrome.setPreferredOrientations([
+///   DeviceOrientation.portraitUp,
+///   DeviceOrientation.portraitDown
+/// ]);
+/// ```
+///
+/// Future Extensibility:
+/// - Add more global app configurations
+/// - Support for dark/light mode switching
+/// - Internationalization setup
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

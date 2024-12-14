@@ -1,3 +1,62 @@
+/// Theme Configuration for Home Helper Application
+///
+/// Provides a centralized, comprehensive theming system
+/// that ensures consistent design across the entire application.
+///
+/// Key Responsibilities:
+/// - Define application-wide design system
+/// - Create light and dark theme variants
+/// - Implement Material Design 3 guidelines
+/// - Provide consistent color and typography
+///
+/// Theme Components:
+/// - Color scheme
+/// - Typography
+/// - Component styles
+/// - Elevation and spacing
+///
+/// Design Principles:
+/// - Material Design 3 compliance
+/// - Adaptive color system
+/// - Consistent visual language
+/// - Accessibility considerations
+///
+/// Color Palette:
+/// - Primary color: Green (#4CAF50)
+/// - Secondary colors
+/// - Error and neutral colors
+/// - Surface and background colors
+///
+/// Typography Configuration:
+/// - Font family: Poppins
+/// - Responsive text sizes
+/// - Weight and style variations
+///
+/// Theming Features:
+/// - Light mode configuration
+/// - Dark mode support (future)
+/// - Component-specific styling
+/// - Consistent design tokens
+///
+/// Typical Use Cases:
+/// - Global app styling
+/// - Consistent UI components
+/// - Brand identity representation
+///
+/// Example Theme Usage:
+/// ```dart
+/// MaterialApp(
+///   theme: AppTheme.lightTheme,
+///   // Application configuration
+/// )
+/// ```
+///
+/// Future Extensibility:
+/// - Dark mode implementation
+/// - Dynamic theme generation
+/// - Customizable theme variants
+/// - Internationalization support
+
 import 'package:flutter/material.dart';
 
 /// A class that contains all the theming configurations for the app.

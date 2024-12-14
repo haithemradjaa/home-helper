@@ -1,3 +1,62 @@
+/// Splash Screen for Home Helper Application
+///
+/// Provides the initial loading screen that appears when the app is launched,
+/// handling app initialization, asset preloading, and first-time setup.
+///
+/// Key Responsibilities:
+/// - Display app launch animation
+/// - Perform initial app configurations
+/// - Check authentication status
+/// - Prepare app for first interaction
+///
+/// Initialization Workflow:
+/// 1. Show branded splash animation
+/// 2. Perform background initializations
+/// 3. Check user authentication
+/// 4. Navigate to appropriate screen
+///
+/// Design Principles:
+/// - Smooth, engaging launch experience
+/// - Minimal loading time
+/// - Consistent branding
+/// - Performance optimization
+///
+/// Screen Components:
+/// - Animated logo or brand element
+/// - Optional loading indicator
+/// - Background initialization logic
+///
+/// Performance Considerations:
+/// - Lightweight initialization
+/// - Asynchronous operations
+/// - Minimal blocking
+///
+/// Typical Use Cases:
+/// - App cold start
+/// - First-time app launch
+/// - Checking initial app state
+///
+/// Authentication Flow:
+/// - Check if user is already logged in
+/// - Determine initial navigation route
+/// - Handle first-time user experience
+///
+/// Example Initialization:
+/// ```dart
+/// // Typical splash screen logic
+/// Future<void> _initializeApp() async {
+///   await Future.wait([
+///     _preloadResources(),
+///     _checkAuthStatus(),
+///   ]);
+/// }
+/// ```
+///
+/// Future Extensibility:
+/// - Advanced caching mechanisms
+/// - More complex initialization flows
+/// - Internationalization support
+/// - Detailed loading progress
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

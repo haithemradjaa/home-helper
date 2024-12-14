@@ -1,3 +1,41 @@
+/// Authentication Repository for Home Helper Application
+///
+/// This file defines the contract and implementation for authentication-related
+/// data operations in the Home Helper application. It serves as an abstraction
+/// layer between the authentication business logic and the data source.
+///
+/// Key Responsibilities:
+/// - Define a contract for authentication operations
+/// - Provide an interface for user authentication and management
+/// - Decouple authentication logic from specific data sources
+/// - Support potential future backend integrations
+///
+/// Design Patterns:
+/// - Repository Pattern: Abstracts data access logic
+/// - Dependency Inversion: Depends on abstractions, not concrete implementations
+///
+/// Authentication Operations:
+/// - User registration
+/// - User login
+/// - User logout
+/// - Profile management
+/// - Authentication status checking
+///
+/// Typical Use Cases:
+/// - User sign-up and login processes
+/// - Persistent authentication state
+/// - Secure user data management
+///
+/// Future Extensibility:
+/// - Easy to swap authentication providers
+/// - Support for multiple authentication methods
+/// - Simplified backend migration
+///
+/// Example:
+/// ```dart
+/// final authRepo = AuthRepositoryImpl();
+/// final user = await authRepo.signInWithEmailAndPassword(email, password);
+/// ```
 import 'package:home_helper/features/auth/domain/entities/user.dart';
 
 /// Repository interface for authentication operations

@@ -1,3 +1,50 @@
+/// Authentication Business Logic Component (BLoC) for Home Helper Application
+///
+/// This file implements the core authentication logic using the BLoC pattern,
+/// coordinating between authentication events, states, and the repository layer.
+///
+/// Key Responsibilities:
+/// - Process authentication-related events
+/// - Manage authentication state transitions
+/// - Coordinate with authentication repository
+/// - Handle complex authentication workflows
+///
+/// Event Handling:
+/// - SignIn: Authenticate user credentials
+/// - Register: Create new user account
+/// - SignOut: Terminate user session
+/// - UpdateProfile: Modify user information
+/// - CheckAuthStatus: Verify current authentication state
+///
+/// Design Principles:
+/// - Separation of Concerns: Decouples authentication logic from UI
+/// - Reactive Programming: Event-driven state management
+/// - Error Handling: Comprehensive error management
+///
+/// State Management Flow:
+/// 1. Receive authentication event
+/// 2. Validate and process event
+/// 3. Interact with authentication repository
+/// 4. Emit corresponding state
+///
+/// Typical Use Cases:
+/// - User authentication and authorization
+/// - Session management
+/// - Profile updates
+///
+/// Example:
+/// ```dart
+/// // Adding a sign-in event
+/// authBloc.add(SignInRequested(
+///   email: 'user@example.com',
+///   password: 'password'
+/// ));
+/// ```
+///
+/// Future Extensibility:
+/// - Support for multi-factor authentication
+/// - Integration with various authentication providers
+/// - Advanced error handling and logging
 import 'dart:async';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:home_helper/features/auth/domain/entities/user.dart';

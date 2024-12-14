@@ -1,3 +1,56 @@
+/// Login Screen for Home Helper Application
+///
+/// This screen provides a comprehensive user authentication interface, 
+/// implementing secure and user-friendly login functionality.
+///
+/// Key Responsibilities:
+/// - Capture user login credentials
+/// - Validate input fields
+/// - Handle authentication process
+/// - Provide user feedback during login
+///
+/// Screen Features:
+/// - Email and password input fields
+/// - Form validation
+/// - Password visibility toggle
+/// - Loading state management
+/// - Error handling
+///
+/// Design Principles:
+/// - Responsive UI design
+/// - Material Design 3 compliant
+/// - Adaptive theming
+/// - Secure input handling
+///
+/// User Experience Considerations:
+/// - Clear error messaging
+/// - Intuitive layout
+/// - Immediate visual feedback
+/// - Prevent multiple submission attempts
+///
+/// Authentication Flow:
+/// 1. User enters credentials
+/// 2. Validate input
+/// 3. Attempt authentication
+/// 4. Navigate or show error
+///
+/// Typical Use Cases:
+/// - User sign-in
+/// - Password recovery initiation
+/// - First-time app access
+///
+/// Example Interaction:
+/// ```
+/// - Enter email: user@example.com
+/// - Enter password: ********
+/// - Tap login button
+/// - Authenticate and navigate to home screen
+/// ```
+///
+/// Future Extensibility:
+/// - Social media login integration
+/// - Biometric authentication
+/// - Advanced password recovery
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:home_helper/shared/widgets/custom_button.dart';

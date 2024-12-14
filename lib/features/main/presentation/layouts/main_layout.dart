@@ -1,3 +1,64 @@
+/// Main Layout for Home Helper Application
+///
+/// Provides the primary structural layout for the app's main screens,
+/// implementing a bottom navigation system and consistent screen organization.
+///
+/// Key Responsibilities:
+/// - Manage primary app navigation
+/// - Provide consistent screen layout
+/// - Handle bottom navigation state
+/// - Organize main app sections
+///
+/// Navigation Sections:
+/// - Home
+/// - Services
+/// - Bookings
+/// - Profile
+///
+/// Design Principles:
+/// - Material Design 3 navigation
+/// - Responsive layout
+/// - Consistent user experience
+/// - Efficient screen transitions
+///
+/// Layout Features:
+/// - Bottom navigation bar
+/// - Active section tracking
+/// - Smooth screen switching
+/// - Persistent navigation state
+///
+/// Performance Considerations:
+/// - Minimal rebuilds
+/// - Efficient state management
+/// - Lazy loading of screens
+///
+/// Typical Use Cases:
+/// - Main app screen organization
+/// - User navigation between primary sections
+/// - Maintaining app-wide navigation context
+///
+/// Navigation Workflow:
+/// 1. User selects bottom navigation item
+/// 2. Update active section
+/// 3. Switch to corresponding screen
+///
+/// Example Navigation:
+/// ```dart
+/// BottomNavigationBar(
+///   currentIndex: _selectedIndex,
+///   onTap: _onItemTapped,
+///   items: [
+///     BottomNavigationBarItem(icon: Icon(Icons.home)),
+///     // Other navigation items
+///   ],
+/// )
+/// ```
+///
+/// Future Extensibility:
+/// - Custom navigation animations
+/// - More navigation sections
+/// - Advanced navigation logic
+/// - Adaptive layouts
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

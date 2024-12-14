@@ -1,3 +1,68 @@
+/// Customizable Button Widget for Home Helper Application
+///
+/// A versatile and configurable button component that provides
+/// consistent styling, interaction feedback, and multiple button types.
+///
+/// Key Responsibilities:
+/// - Create a flexible, reusable button widget
+/// - Support multiple button styles and variations
+/// - Provide visual and interactive feedback
+/// - Maintain design system consistency
+///
+/// Button Types:
+/// - Primary action buttons
+/// - Secondary buttons
+/// - Outlined buttons
+/// - Text buttons
+/// - Loading state buttons
+///
+/// Design Principles:
+/// - Material Design 3 guidelines
+/// - Responsive touch targets
+/// - Adaptive theming
+/// - Accessibility considerations
+///
+/// Interactive States:
+/// - Default
+/// - Pressed
+/// - Disabled
+/// - Loading
+/// - Error
+///
+/// Performance Features:
+/// - Minimal rebuild overhead
+/// - Efficient state management
+/// - Smooth animations
+///
+/// Typical Use Cases:
+/// - Form submission buttons
+/// - Navigation triggers
+/// - Action confirmations
+/// - Call-to-action elements
+///
+/// Example Implementations:
+/// ```dart
+/// // Primary action button
+/// CustomButton(
+///   label: 'Submit',
+///   onPressed: _handleSubmit,
+///   isLoading: _isProcessing,
+/// )
+///
+/// // Secondary button
+/// CustomButton(
+///   label: 'Cancel',
+///   onPressed: _handleCancel,
+///   type: CustomButtonType.secondary,
+/// )
+/// ```
+///
+/// Future Extensibility:
+/// - Custom icon support
+/// - Advanced loading indicators
+/// - Internationalization
+/// - More granular styling options
+
 import 'package:flutter/material.dart';
 
 /// Enum defining the different types of buttons available

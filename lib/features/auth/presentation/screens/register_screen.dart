@@ -1,3 +1,62 @@
+/// Registration Screen for Home Helper Application
+///
+/// This screen provides a comprehensive user registration interface, 
+/// implementing a secure and user-friendly account creation process.
+///
+/// Key Responsibilities:
+/// - Capture new user registration details
+/// - Validate input fields comprehensively
+/// - Handle user registration process
+/// - Provide detailed user feedback
+///
+/// Screen Features:
+/// - Name, email, and password input fields
+/// - Advanced form validation
+/// - Password strength checking
+/// - Password visibility toggle
+/// - Loading state management
+/// - Comprehensive error handling
+///
+/// Design Principles:
+/// - Responsive and adaptive UI
+/// - Material Design 3 guidelines
+/// - Secure input handling
+/// - User-centric design
+///
+/// Registration Flow:
+/// 1. User enters registration details
+/// 2. Validate all input fields
+/// 3. Check password strength
+/// 4. Attempt user registration
+/// 5. Navigate or show detailed errors
+///
+/// Validation Checks:
+/// - Name: Required, minimum length
+/// - Email: Format validation
+/// - Password: 
+///   - Minimum length
+///   - Contains special characters
+///   - Contains numbers
+///   - Contains uppercase and lowercase
+///
+/// Typical Use Cases:
+/// - New user account creation
+/// - Initial app onboarding
+/// - User self-registration
+///
+/// Example Interaction:
+/// ```
+/// - Enter full name: John Doe
+/// - Enter email: john@example.com
+/// - Enter password: StrongP@ssw0rd!
+/// - Tap register button
+/// - Create account and navigate to welcome screen
+/// ```
+///
+/// Future Extensibility:
+/// - Social media registration
+/// - Additional profile setup steps
+/// - Enhanced identity verification
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:home_helper/shared/widgets/custom_button.dart';

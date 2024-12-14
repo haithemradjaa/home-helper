@@ -1,3 +1,61 @@
+/// Customizable Text Field Widget for Home Helper Application
+///
+/// A reusable, highly configurable text input widget that provides
+/// enhanced functionality and consistent styling across the application.
+///
+/// Key Responsibilities:
+/// - Provide a flexible text input component
+/// - Support various input types and validations
+/// - Maintain consistent design language
+/// - Enhance user input experience
+///
+/// Features:
+/// - Customizable appearance
+/// - Input validation
+/// - Password visibility toggle
+/// - Error state handling
+/// - Adaptive theming
+///
+/// Design Principles:
+/// - Material Design 3 compliant
+/// - Responsive layout
+/// - Accessibility considerations
+/// - Consistent visual feedback
+///
+/// Input Types Supported:
+/// - Text
+/// - Email
+/// - Password
+/// - Phone number
+/// - Custom validations
+///
+/// Validation Capabilities:
+/// - Required field checking
+/// - Minimum/maximum length
+/// - Format validation
+/// - Custom validation rules
+///
+/// Typical Use Cases:
+/// - User registration forms
+/// - Login screens
+/// - Profile editing
+/// - Search inputs
+///
+/// Example Usage:
+/// ```dart
+/// CustomTextField(
+///   label: 'Email',
+///   controller: _emailController,
+///   validator: (value) => validateEmail(value),
+///   keyboardType: TextInputType.emailAddress,
+/// )
+/// ```
+///
+/// Future Extensibility:
+/// - Support for internationalization
+/// - Advanced input masking
+/// - More complex validation patterns
+/// - Integration with form libraries
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

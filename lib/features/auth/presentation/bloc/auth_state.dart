@@ -1,3 +1,46 @@
+/// Authentication State Management for Home Helper Application
+///
+/// This file defines the state representation and management for authentication
+/// in the Home Helper application, utilizing the BLoC state management pattern.
+///
+/// Key Responsibilities:
+/// - Represent all possible authentication states
+/// - Provide a comprehensive view of the current authentication context
+/// - Support type-safe state transitions
+///
+/// State Lifecycle:
+/// - initial: Application startup state
+/// - loading: Authentication process in progress
+/// - authenticated: User successfully logged in
+/// - unauthenticated: No active user session
+/// - error: Authentication failure or system error
+///
+/// Design Principles:
+/// - Immutability: States are immutable snapshots
+/// - Equatable: Enables efficient state comparison
+/// - Comprehensive: Captures full authentication context
+///
+/// State Composition:
+/// - Authentication status
+/// - Current user (if authenticated)
+/// - Error information (if applicable)
+///
+/// Typical Use Cases:
+/// - Determining UI navigation flow
+/// - Controlling access to protected routes
+/// - Displaying authentication-related messages
+///
+/// Example:
+/// ```dart
+/// // Checking authentication state
+/// if (state.status == AuthStatus.authenticated) {
+///   navigateToHomeScreen();
+/// }
+/// ```
+///
+/// Future Extensibility:
+/// - Support for more complex authentication scenarios
+/// - Easy integration with different authentication providers
 import 'package:equatable/equatable.dart';
 import 'package:home_helper/features/auth/domain/entities/user.dart';
 
